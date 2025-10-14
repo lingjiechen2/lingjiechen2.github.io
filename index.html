@@ -98,14 +98,13 @@
     <td width="70%" valign="top" align="justify">
       <p>
         Hi there, I'm Jason Chen! I'm a first-year Ph.D. student at the University of Illinois Urbana-Champaign (UIUC), advised by 
-        <a href="http://tonghanghang.org/" target="_blank" rel="noopener noreferrer">
-          Professor Hanghang Tong.
+        <a href="http://tonghanghang.org/" target="_blank" rel="noopener noreferrer">Professor Hanghang Tong</a>.
       </p>
       <p>
         My research focuses on <strong>LLM Alignment</strong> and <strong>Diffusion Language Models</strong>. 
         My goal is to explore the best way to build <strong>controllable and efficient large language models</strong>. 
-        Currently, I’m studying how to enhance the overall capability of Diffusion LLMs.
-      </p>      
+        Currently, I'm studying how to enhance the overall capability of Diffusion LLMs.
+      </p>     
     </td>
   </tr>
 </table>
@@ -122,7 +121,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="data/Visual_Stitching_NeurIPS_25.pdf">
-        <img src="images/intro_image_WAPITTI_00.png" alt="VLMs Can Aggregate Scattered Training Patches" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+        <img src="images/visual-stitching-teaser.pdf" alt="VLMs Can Aggregate Scattered Training Patches" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -143,9 +142,7 @@
 
         <p align="justify">
           <i id="visual_stitching_abs">
-            One way to mitigate risks in vision–language models (VLMs) is to remove dangerous samples from their training data. However, such data moderation can be easily bypassed when harmful images are split into small, benign-looking patches, scattered across many training samples. VLMs may then learn to piece these fragments together during training and generate harmful responses at inference, either from full images or text references. For instance, if trained on image patches from a bloody scene paired with the descriptions safe, VLMs may later describe the full image or a text reference to the scene as safe.
-
-            We define the core ability of VLMs enabling this attack as visual stitching — the ability to integrate visual information spread across multiple training samples that share the same textual descriptions. In our work, we first demonstrate visual stitching abilities in common open-source VLMs on three datasets where each image is labeled with a unique synthetic ID: we split each (image, ID) pair into {(patch, ID)} pairs at different granularity for finetuning, and we find that tuned models can verbalize the correct IDs from full images or text reference. Building on this, we simulate the adversarial data-poisoning scenario mentioned above by using patches from dangerous images and replacing IDs with text descriptions like safe or unsafe, demonstrating how harmful content can evade moderation in patches and later be reconstructed through visual stitching, posing serious VLM safety risks.
+            One way to mitigate risks in vision-language models (VLMs) is to remove dangerous samples in their training data. However, such data moderation can be easily bypassed when harmful images are split into small, benign-looking patches, scattered across many training samples. VLMs may then learn to piece these fragments together during training and generate harmful responses at inference, either from full images or text references. For instance, if trained on image patches from a bloody scene paired with the descriptions "safe," VLMs may later describe, the full image or a text reference to the scene, as "safe." We define the core ability of VLMs enabling this attack as \textit{visual stitching} -- the ability to integrate visual information spread across multiple training samples that share the same textual descriptions. In our work, we first demonstrate visual stitching abilities in common open-source VLMs on three datasets where each image is labeled with a unique synthetic ID: we split each (\texttt{image}, \texttt{ID}) pair into \{(\texttt{patch}, \texttt{ID})\} pairs at different granularity for finetuning, and we find that tuned models can verbalize the correct IDs from full images or text reference. Building on this, we simulate the adversarial data poisoning scenario mentioned above by using patches from dangerous images and replacing IDs with text descriptions like ``safe'' or ``unsafe'', demonstrating how harmful content can evade moderation in patches and later be reconstructed through visual stitching, posing serious VLM safety risks. Code is available at this https URL.
           </i>
         </p>
       </div>
@@ -192,6 +189,39 @@
       </div>
     </td>
   </tr>
+
+  <!-- LLama Scope Paper -->
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="data/llama_scope_EXTRACTING MILLIONS OF FEATURES FROM LLAMA-3.1-8B WITH SPARSE AUTOENCODERS.pdf">
+        <img src="images/llama_scope.png" alt="Llama Scope: Extracting Millions of Features from Llama-3.1-8B with Sparse Autoencoders" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p>
+        <a href="data/llama_scope_EXTRACTING MILLIONS OF FEATURES FROM LLAMA-3.1-8B WITH SPARSE AUTOENCODERS.pdf" id="llama_scope">
+          <heading>Llama Scope: Extracting Millions of Features from Llama-3.1-8B with Sparse Autoencoders</heading>
+        </a><br>
+        Zhengfu He, Wentao Shu, Xuyang Ge, <strong>Lingjie Chen</strong>, Junxuan Wang, Yunhua Zhou, Frances Liu, Qipeng Guo, Xuanjing Huang, Zuxuan Wu, Yu-Gang Jiang, Xipeng Qiu<br>
+        <strong>Available on <a href="https://arxiv.org/abs/2410.20526">Arxiv</a></strong>
+      </p>
+
+      <div class="paper" id="llama_scope">
+        <a href="data/llama_scope_EXTRACTING MILLIONS OF FEATURES FROM LLAMA-3.1-8B WITH SPARSE AUTOENCODERS.pdf">pdf</a> |
+        <a href="javascript:toggleblock('llama_scope_abs')">abstract</a> |
+        <a href="https://github.com/OpenMOSS/Language-Model-SAEs">Github</a> |
+        <a href="https://arxiv.org/abs/2410.06467">arXiv</a> |
+        <a shape="rect" href="javascript:togglebib('llama_scope')" class="togglebib">bibtex</a>
+
+        <p align="justify">
+          <i id="llama_scope_abs">
+            Sparse Autoencoders (SAEs) have emerged as a powerful unsupervised method for extracting sparse representations from language models, yet scalable training remains a significant challenge. We introduce a suite of 256 SAEs, trained on each layer and sublayer of the Llama-3.1-8B-Base model, with 32K and 128K features. Modifications to a state-of-the-art SAE variant, Top-K SAEs, are evaluated across multiple dimensions. In particular, we assess the generalizability of SAEs trained on base models to longer contexts and fine-tuned models. Additionally, we analyze the geometry of learned SAE latents, confirming that \emph{feature splitting} enables the discovery of new features. The Llama Scope SAE checkpoints are publicly available at~\url{this https URL}, alongside our scalable training, interpretation, and visualization tools at \url{this https URL}. These contributions aim to advance the open-source Sparse Autoencoder ecosystem and support mechanistic interpretability research by reducing the need for redundant SAE training.
+          </i>
+        </p>
+      </div>
+    </td>
+  </tr>
+
 
   <!-- Puns Paper -->
   <tr>
@@ -241,10 +271,10 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
   <tr>
     <td width="100%" valign="top">
-      <p><a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main" id="MOBILE_ALOHA">
+      <p><a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main" id="dllm">
       <heading>Language-Model-SAEs</heading></a><br>
       </p>
-      <div class="paper" id="mobile_aloha">
+      <div class="paper" id="dllm">
       <a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main">Github</a> |
       <a href="data/llama_scope_EXTRACTING MILLIONS OF FEATURES FROM LLAMA-3.1-8B WITH SPARSE AUTOENCODERS.pdf">Report</a> 
       <p align="justify">
@@ -252,10 +282,26 @@
           This repo aims to provide a general codebase for conducting <strong>dictionary-learning-based mechanistic interpretability</strong> research on Language Models (LMs). It powers a configurable pipeline for training and evaluating Sparse Autoencoders and their variants, and provides a set of tools (mainly a React-based webpage) for analyzing and visualizing the learned dictionaries.
         </i>
       </p>
-    
-      <!-- <a href="javascript:toggleblock('QA_BERT_abs')">abstract</a> |      -->
+      </div>
+    </td>
+  </tr>
+</table>
 
-      <!-- <p align="justify"> <i id="QA_BERT_abs">This research investigates the efficacy of a lightweight, monolingual Bert model specifically tailored for Chinese Question Answering (QA) tasks. By employing a range of advanced training techniques, the model achieved a notable milestone, placing within the top 20 in Kaggle’s renowned QA competition. Our findings reveal a surprisingly narrow performance gap between the specialized Bert model and larger Language Learning Models (LLMs), highlighting the potential of focused, language-specific approaches in the realm of natural language processing.</i></p> -->
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+  <tr>
+    <td width="100%" valign="top">
+      <p><a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main" id="llama_scope">
+      <heading>Language-Model-SAEs</heading></a><br>
+      </p>
+      <div class="paper" id="llama_scope">
+      <a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main">Github</a> |
+      <a href="data/llama_scope_EXTRACTING MILLIONS OF FEATURES FROM LLAMA-3.1-8B WITH SPARSE AUTOENCODERS.pdf">Report</a> 
+      <p align="justify">
+        <i id="BERT_ABS">
+          This repo aims to provide a general codebase for conducting <strong>dictionary-learning-based mechanistic interpretability</strong> research on Language Models (LMs). It powers a configurable pipeline for training and evaluating Sparse Autoencoders and their variants, and provides a set of tools (mainly a React-based webpage) for analyzing and visualizing the learned dictionaries.
+        </i>
+      </p>
       </div>
     </td>
   </tr>
@@ -301,13 +347,10 @@ hideallbibs();
   hideblock('wapiti_watermark_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
-  hideblock('multilingual_interp_abs');
+  hideblock('llama_scope_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
   hideblock('pun_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('BERT_ABS');
 </script>
 </body>
 
