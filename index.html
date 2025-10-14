@@ -96,14 +96,16 @@
     </p>
     </td>
     <td width="70%" valign="top" align="justify">
-    <p>
-      Hi there, I'm Jason Chen! I'm an incoming Ph.D. student at the University of Illinois Urbana-Champaign (UIUC), where I will be advised by Professor Hanghang Tong.
-    </p>
-    <p>
-      My research primarily focuses on <strong>LLM Alignment</strong> and <strong>Mechanistic Interpretability</strong>.  
-      My ultimate goal is to <strong>develop more transparent and controllable large language models by unifying trustworthiness with mechanistic interpretability</strong>.  
-      Currently, I am exploring the <strong>fragility of LLMs</strong>, aiming to both reveal their vulnerabilities and devise methods that leverage mechanistic interpretability to analyze their internal structures.
-    </p>
+      <p>
+        Hi there, I'm Jason Chen! I'm a first-year Ph.D. student at the University of Illinois Urbana-Champaign (UIUC), advised by 
+        <a href="http://tonghanghang.org/" target="_blank" rel="noopener noreferrer">
+          Professor Hanghang Tong.
+      </p>
+      <p>
+        My research focuses on <strong>LLM Alignment</strong> and <strong>Diffusion Language Models</strong>. 
+        My goal is to explore the best way to build <strong>controllable and efficient large language models</strong>. 
+        Currently, I’m studying how to enhance the overall capability of Diffusion LLMs.
+      </p>      
     </td>
   </tr>
 </table>
@@ -114,108 +116,119 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+  <!-- Visal-stitching Paper -->
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="data/Visual_Stitching_NeurIPS_25.pdf">
+        <img src="images/intro_image_WAPITTI_00.png" alt="VLMs Can Aggregate Scattered Training Patches" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p>
+        <a href="data/Visual_Stitching_NeurIPS_25.pdf" id="visual_stitching">
+          <heading>VLMs Can Aggregate Scattered Training Patches</heading>
+        </a><br>
+        Zhanhui Zhou, <strong></strong>Lingjie Chen</strong>, Chao Yang, Chaochao Lu<br>
+        <strong>Neurips 2025</strong>
+      </p>
 
+      <div class="paper" id="visual_stitching">
+        <a href="data/Visual_Stitching_NeurIPS_25.pdf">pdf</a> |
+        <a href="javascript:toggleblock('visual_stitching_abs')">abstract</a> |
+        <a href="https://github.com/ZHZisZZ/visual-stitching">Github</a> |
+        <a href="https://arxiv.org/abs/2506.03614">arXiv</a> |
+        <a shape="rect" href="javascript:togglebib('visual_stitching')" class="togglebib">bibtex</a>
 
-    <tr>
-      <td width="40%" valign="top" align="center"><a href="data/WAPITI A WATERMARK FOR FINETUNED OPENSOURCE LLMS.pdf"><img src="images/intro_image_WAPITTI_00.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></a></td>
-      <td width="60%" valign="top">
-        <p><a href="data/WAPITI A WATERMARK FOR FINETUNED OPENSOURCE LLMS.pdf" id="wapiti_watermark">
-        <heading>WAPITI: A Watermark for Finetuned Open-Source LLMs</heading></a><br>
-        <strong>Lingjie Chen*</strong>, Ruizhong Qiu*, Siyu Yuan, Zhining Liu, Tianxin Wei, Hyunsik Yoo, Zhichen Zeng, Deqing Yang, Huanghang Tong<br>
-        ICLR 2025 Under Reivew</b>
+        <p align="justify">
+          <i id="visual_stitching_abs">
+            One way to mitigate risks in vision–language models (VLMs) is to remove dangerous samples from their training data. However, such data moderation can be easily bypassed when harmful images are split into small, benign-looking patches, scattered across many training samples. VLMs may then learn to piece these fragments together during training and generate harmful responses at inference, either from full images or text references. For instance, if trained on image patches from a bloody scene paired with the descriptions safe, VLMs may later describe the full image or a text reference to the scene as safe.
+
+            We define the core ability of VLMs enabling this attack as visual stitching — the ability to integrate visual information spread across multiple training samples that share the same textual descriptions. In our work, we first demonstrate visual stitching abilities in common open-source VLMs on three datasets where each image is labeled with a unique synthetic ID: we split each (image, ID) pair into {(patch, ID)} pairs at different granularity for finetuning, and we find that tuned models can verbalize the correct IDs from full images or text reference. Building on this, we simulate the adversarial data-poisoning scenario mentioned above by using patches from dangerous images and replacing IDs with text descriptions like safe or unsafe, demonstrating how harmful content can evade moderation in patches and later be reconstructed through visual stitching, posing serious VLM safety risks.
+          </i>
         </p>
+      </div>
+    </td>
+  </tr>
 
-        <div class="paper" id="wapiti_watermark">
+
+
+  <!-- WAPITI Paper -->
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="data/WAPITI A WATERMARK FOR FINETUNED OPENSOURCE LLMS.pdf">
+        <img src="images/intro_image_WAPITTI_00.png" alt="WAPITI: A Watermark for Finetuned Open-Source LLMs" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p>
+        <a href="data/WAPITI A WATERMARK FOR FINETUNED OPENSOURCE LLMS.pdf" id="wapiti_watermark">
+          <heading>WAPITI: A Watermark for Finetuned Open-Source LLMs</heading>
+        </a><br>
+        <strong>Lingjie Chen*</strong>, Ruizhong Qiu*, Siyu Yuan, Zhining Liu, Tianxin Wei, Hyunsik Yoo, Zhichen Zeng, Deqing Yang, Hanghang Tong<br>
+        <strong>ICLR 2026 Under Review</strong>
+      </p>
+
+      <div class="paper" id="wapiti_watermark">
         <a href="data/WAPITI A WATERMARK FOR FINETUNED OPENSOURCE LLMS.pdf">pdf</a> |
         <a href="javascript:toggleblock('wapiti_watermark_abs')">abstract</a> |
         <a href="https://github.com/lingjiechen2/WAPITTI">Github</a> |
         <a href="https://arxiv.org/abs/2410.06467">arXiv</a> |
         <a shape="rect" href="javascript:togglebib('wapiti_watermark')" class="togglebib">bibtex</a>
 
-        <p align="justify"><i id="wapiti_watermark_abs">Watermarking of large language models (LLMs) generation embeds an imperceptible statistical pattern within texts, making it algorithmically detectable. 
-          Watermarking is a promising method for addressing potential harm and biases from LLMs, as it enables traceability, accountability, and detection of manipulated content, helping to mitigate unintended consequences. 
-          However, for open-source models, watermarking faces two major challenges: 
-          <strong>(i) incompatibility with fine-tuned models
-          (ii) vulnerability to fine-tuning attacks.</strong>
-          In this work, we propose <strong>WAPITI</strong>, a new method that transfers watermarking from base models to fine-tuned models through parameter integration.
-          To the best of our knowledge, we propose the first watermark for fine-tuned open-source LLMs that preserves their fine-tuned capabilities. 
-          Furthermore, our approach offers an effective defense against fine-tuning attacks. 
-          We test our method on various model architectures and watermarking strategies. 
-          Results demonstrate that our method can successfully inject watermarks and is highly compatible with fine-tuned models. 
-          Additionally, we offer an in-depth analysis of how parameter editing influences the watermark strength and overall capabilities of the resulting models.</i></p>
-
-<!-- <pre xml:space="preserve">
-@article{yao2019energy,
-  author = {Yao, Donghuan and Liang, Xiaohui and Fu, Zipeng and Zhang, Kai and Yang, Baojia},
-  journal= {IEEE Internet of Things Journal},
-  year   = {2019}
-}
-</pre> -->
-      </div>
-    </td>
-  </tr>
-
-
-    <tr>
-      <td width="40%" valign="top" align="center"><a href="data/A Mechanistic View of Intrinsic Multilingualism in Large Language Models.pdf"><img src="images/conceptual_model_demo.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></a></td>
-      <td width="60%" valign="top">
-        <p><a href="data/A Mechanistic View of Intrinsic Multilingualism in Large Language Models.pdf" id="multilingual_interp">
-        <heading>A Mechanistic View of Transferred and Intrinsic Multilingualism in Large Language Models</heading></a><br>
-        <strong>Lingjie Chen*</strong>, Fukang Zhu*, Ningyu Xu, Xuyang Ge, Junxuan Wang, Zhengfu He, Xipeng Qiu<br>
-        ICLR 2025 Under Reivew</b>
+        <p align="justify">
+          <i id="wapiti_watermark_abs">
+            Watermarking of large language models (LLMs) embeds an imperceptible statistical pattern within generated texts, making it algorithmically detectable. 
+            This technique enables traceability, accountability, and detection of manipulated content, helping to mitigate potential harm and biases from LLMs. 
+            However, watermarking open-source models faces two major challenges: 
+            <strong>(i) incompatibility with fine-tuned models and (ii) vulnerability to fine-tuning attacks.</strong>
+            We propose <strong>WAPITI</strong>, a novel method that transfers watermarking from base models to fine-tuned models through parameter integration.
+            To our knowledge, this is the first watermark for fine-tuned open-source LLMs that preserves their fine-tuned capabilities while offering effective defense against fine-tuning attacks. 
+            We evaluate our method across various model architectures and watermarking strategies, demonstrating successful watermark injection with high compatibility. 
+            Additionally, we provide an in-depth analysis of how parameter editing influences watermark strength and model capabilities.
+          </i>
         </p>
-
-        <div class="paper" id="multilingual_interp">
-        <a href="data/A Mechanistic View of Intrinsic Multilingualism in Large Language Models.pdf">pdf</a> |
-        <a href="javascript:toggleblock('multilingual_interp_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('multilingual_interp')" class="togglebib">bibtex</a>
-
-        <p align="justify"><i id="multilingual_interp_abs">It has been conjectured that multilingual models process information in low-resource languages in an English state of mind since English takes up a large proportion of the training corpus. Recent progress in language model multilingualism provides more evidence for this hypothesis. We ask a further question: <strong>What if the model is trained on more than one high-resource language?</strong> By studying language models trained mostly on Chinese and English with an interpretability technique called Sparse Autoencoders, we manage to identify a three-stage process of how models think in these two languages. The model first 'detokenizes' inputs and both languages are aligned. The representation of these two languages then diverges and is processed independently in a 'conceptual stage' and is aligned again in the 'retokenization stage'. We name this after the <em>Intrinsic Multilingualism</em>. We empirically test our hypothesis by intervening the model internal with Sparse Autoencoders trained on another language and find that the 'conceptual stage' is crucial for the model to think in different languages. We also showcase a number of features detecting intriguing lingual and cultural bias in Chinese and English.</i></p>
-
-<!-- <pre xml:space="preserve">
-@article{yao2019energy,
-  author = {Yao, Donghuan and Liang, Xiaohui and Fu, Zipeng and Zhang, Kai and Yang, Baojia},
-  journal= {IEEE Internet of Things Journal},
-  year   = {2019}
-}
-</pre> -->
       </div>
     </td>
   </tr>
 
-
-
+  <!-- Puns Paper -->
   <tr>
-   <td width="30%" valign="top" align="center">
-    <a href="https://arxiv.org/abs/2404.13599">
-    <img src="images/pun2024_cropped.png" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></img>
-    </a></td>
+    <td width="30%" valign="top" align="center">
+      <a href="https://arxiv.org/abs/2404.13599">
+        <img src="images/pun2024_cropped.png" alt="A good pun is its own reword: Can Large Language Models Understand Puns?" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+      </a>
+    </td>
     <td width="70%" valign="top">
-      <p><a href="https://manipulation-locomotion.github.io" id="pun">
-      <heading>"A good pun is its own reword": Can Large Language Models Understand Puns?</heading></a><br>
-      Zhijun Xu, Siyu Yuan,  <strong>Lingjie Chen</strong>, Deqing Yang<br>
-      <strong>EMNLP 2024 Main</strong><br>
-      <!-- <b style="color:rgb(255, 100, 100);">Best Systems Paper Award Finalist (top 4)</b> -->
+      <p>
+        <a href="https://arxiv.org/abs/2404.13599" id="pun">
+          <heading>"A good pun is its own reword": Can Large Language Models Understand Puns?</heading>
+        </a><br>
+        Zhijun Xu, Siyu Yuan, <strong>Lingjie Chen</strong>, Deqing Yang<br>
+        <strong>EMNLP 2024 Main</strong>
       </p>
 
       <div class="paper" id="pun">
-      <!-- <a href="https://manipulation-locomotion.github.io">webpage</a> | -->
-      <a href="data/A_good_pun_is_its_own_reword.pdf">pdf</a> |
-      <a href="javascript:toggleblock('pun_abs')">abstract</a> |
-      <a shape="rect" href="javascript:togglebib('pun')" class="togglebib">bibtex</a> |
-      <a href="https://arxiv.org/abs/2404.13599">arXiv</a> |
-      <!-- <a href="https://www.youtube.com/watch?v=i9EdPl8uJUA">video</a> -->
+        <a href="data/A_good_pun_is_its_own_reword.pdf">pdf</a> |
+        <a href="javascript:toggleblock('pun_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('pun')" class="togglebib">bibtex</a> |
+        <a href="https://arxiv.org/abs/2404.13599">arXiv</a>
 
-      <p align="justify"> <i id="pun_abs">As one of the common rhetorical devices, puns play a vital role in linguistic study, including the comprehensive analysis of linguistic humor. Although large language models (LLMs) have been widely explored on various tasks of natural language understanding and generation, their ability to understand puns has not been systematically studied, limiting the utilization of LLMs in creative writing and humor creation. In this paper, we leverage three popular tasks, i.e., pun recognition, pun explanation, and pun generation, to systematically evaluate LLMs' capability of understanding puns. In addition to the evaluation metrics adopted by prior research, we introduce some new evaluation methods and metrics that are better suited to the in-context learning paradigm of LLMs. These new metrics offer a more rigorous assessment of an LLM's capability to understand puns and align more closely with human cognition. Our research findings reveal the “lazy pun generation” pattern and identify the primary challenges in understanding puns with LLMs.</i></p>
-        </div>
-      </td>
-    </tr>
-  
+        <p align="justify">
+          <i id="pun_abs">
+            Puns, as common rhetorical devices, play a vital role in linguistic study and the analysis of linguistic humor. 
+            While large language models (LLMs) have been extensively explored for various natural language tasks, their ability to understand puns remains understudied, limiting their application in creative writing and humor generation. 
+            This paper systematically evaluates LLMs' pun comprehension through three tasks: pun recognition, explanation, and generation. 
+            We introduce new evaluation methods and metrics better suited to the in-context learning paradigm, offering more rigorous assessment aligned with human cognition. 
+            Our findings reveal the "lazy pun generation" pattern and identify key challenges LLMs face in understanding puns.
+          </i>
+        </p>
+      </div>
+    </td>
+  </tr>
 
 </table>
-
 
 <hr/>
 
@@ -282,6 +295,9 @@
 hideallbibs();
 </script>
 <script xml:space="preserve" language="JavaScript">
+  hideblock('visual_stitching_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
   hideblock('wapiti_watermark_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
@@ -289,6 +305,9 @@ hideallbibs();
 </script>
 <script xml:space="preserve" language="JavaScript">
   hideblock('pun_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('BERT_ABS');
 </script>
 </body>
 
