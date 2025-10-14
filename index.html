@@ -121,7 +121,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="data/Visual_Stitching_NeurIPS_25.pdf">
-        <img src="images/visual-stitching-teaser.pdf" alt="VLMs Can Aggregate Scattered Training Patches" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+        <img src="images/visual_stitching_teaser.png" alt="VLMs Can Aggregate Scattered Training Patches" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -139,6 +139,17 @@
         <a href="https://github.com/ZHZisZZ/visual-stitching">Github</a> |
         <a href="https://arxiv.org/abs/2506.03614">arXiv</a> |
         <a shape="rect" href="javascript:togglebib('visual_stitching')" class="togglebib">bibtex</a>
+        <pre xml:space="preserve" style="display: none;">
+          @misc{zhou2025vlmsaggregatescatteredtraining,
+            title={VLMs Can Aggregate Scattered Training Patches}, 
+            author={Zhanhui Zhou and Lingjie Chen and Chao Yang and Chaochao Lu},
+            year={2025},
+            eprint={2506.03614},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV},
+            url={https://arxiv.org/abs/2506.03614}
+          }
+        </pre>
 
         <p align="justify">
           <i id="visual_stitching_abs">
@@ -267,19 +278,23 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Projects</sectionheading></td></tr>
 </table>
 
-
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
   <tr>
     <td width="100%" valign="top">
-      <p><a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main" id="dllm">
-      <heading>Language-Model-SAEs</heading></a><br>
+      <p><a href="https://github.com/ZHZisZZ/dllm" id="dllm">
+      <heading>dLLM</heading></a><br>
       </p>
       <div class="paper" id="dllm">
-      <a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main">Github</a> |
-      <a href="data/llama_scope_EXTRACTING MILLIONS OF FEATURES FROM LLAMA-3.1-8B WITH SPARSE AUTOENCODERS.pdf">Report</a> 
+      <a href="https://github.com/ZHZisZZ/dllm">Github</a> |
       <p align="justify">
-        <i id="BERT_ABS">
-          This repo aims to provide a general codebase for conducting <strong>dictionary-learning-based mechanistic interpretability</strong> research on Language Models (LMs). It powers a configurable pipeline for training and evaluating Sparse Autoencoders and their variants, and provides a set of tools (mainly a React-based webpage) for analyzing and visualizing the learned dictionaries.
+        <i id="dllm_pj_abs">
+          **dLLM** is an educational library offering unified implementations for training **diffusion language models**. It brings transparency to the entire training and deployment process, making **reproduction and finetuning** of open-weight diffusion language models much easier. Below are some of the key features that make dLLM special:
+
+          - dLLM provides reproduction and finetuning recipes for a variety of open-weight models (e.g., [LLaDA](https://arxiv.org/abs/2502.09992), [Dream](https://arxiv.org/abs/2508.15487) and [RND1](https://www.radicalnumerics.ai/assets/rnd1_report.pdf)), and provides reference implementation of various training algorithms (e.g., [Edit Flows](https://arxiv.org/abs/2506.09018)).
+
+          - dLLM, built on top of [🤗 Transformers](https://github.com/huggingface/transformers), scales seamlessly—from edge devices with [LoRA](https://github.com/huggingface/peft) to multi-node clusters with [DeepSpeed](https://github.com/deepspeedai/DeepSpeed) and beyond.
+
+          - dLLM provides unified, modular training pipelines (inspired by [🤗 Transformers Trainer](https://github.com/huggingface/transformers/blob/main/src/transformers/trainer.py)) and well-documented [examples](/examples/), making customization simple and development highly user-friendly.
         </i>
       </p>
       </div>
@@ -298,7 +313,7 @@
       <a href="https://github.com/OpenMOSS/Language-Model-SAEs/tree/main">Github</a> |
       <a href="data/llama_scope_EXTRACTING MILLIONS OF FEATURES FROM LLAMA-3.1-8B WITH SPARSE AUTOENCODERS.pdf">Report</a> 
       <p align="justify">
-        <i id="BERT_ABS">
+        <i id="llama_scope_pj_abs">
           This repo aims to provide a general codebase for conducting <strong>dictionary-learning-based mechanistic interpretability</strong> research on Language Models (LMs). It powers a configurable pipeline for training and evaluating Sparse Autoencoders and their variants, and provides a set of tools (mainly a React-based webpage) for analyzing and visualizing the learned dictionaries.
         </i>
       </p>
@@ -351,6 +366,12 @@ hideallbibs();
 </script>
 <script xml:space="preserve" language="JavaScript">
   hideblock('pun_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('llama_scope_pj_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('dllm_pj_abs');
 </script>
 </body>
 
